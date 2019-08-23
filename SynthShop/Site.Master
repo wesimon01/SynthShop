@@ -44,9 +44,9 @@
                     <img src="/images/brand.png" />
                 </a>
                 <span> &nbsp &nbsp &nbsp &nbsp </span>
-                <a runat="server" href="~/About.aspx"> About </a>
+                <a runat="server" href="~/Catalog/About.aspx"> About </a>
                 <span>&nbsp &nbsp &nbsp</span>
-                <a runat="server" href="~/Contact.aspx"> Contact </a>
+                <a runat="server" href="~/Catalog/Contact.aspx"> Contact </a>
                 <span>&nbsp</span>
             </div>
         </header>

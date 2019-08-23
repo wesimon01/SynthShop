@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace SynthShop.ViewModel
 {
     public class PaginatedItemsViewModel<TEntity> where TEntity : class
     {
-        public int AcutalPage { get; private set; }
+        public int ActualPage { get; private set; }
         public int ItemsPerPage { get; private set; }
         public long TotalItems { get; private set; }
         public int TotalPages { get; set; }
@@ -15,7 +13,7 @@ namespace SynthShop.ViewModel
 
         public PaginatedItemsViewModel(int pageIndex, int pageSize, long count, IEnumerable<TEntity> data)
         {
-            AcutalPage = pageIndex;
+            ActualPage = pageIndex;
             ItemsPerPage = pageSize;
             TotalItems = count;
             TotalPages = (int)Math.Ceiling((decimal)count / pageSize);

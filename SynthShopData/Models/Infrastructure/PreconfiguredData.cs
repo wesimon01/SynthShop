@@ -12,22 +12,22 @@ namespace SynthShopData.Models.Infrastructure
         {
             return new List<CatalogItem>()
             {
-                new CatalogItem { Id = 1, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 1, AvailableStock = 100, Description = "Roland flagship synth", Name = "Roland Jupiter 6", Price = 19.5M, PictureFileName = "1.png" },
-                new CatalogItem { Id = 2, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 2, AvailableStock = 100, Description = "Roland flagship synth", Name = "Roland Jupiter 8", Price= 8.50M, PictureFileName = "2.png" },
-                new CatalogItem { Id = 3, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 3, AvailableStock = 100, Description = "Classic Roland synth", Name = "Roland Juno 60", Price = 12, PictureFileName = "3.png" },
-                new CatalogItem { Id = 4, CatalogTypeId = 1, CatalogManufacturerId = 2, CatalogItemSpecsId = 4, AvailableStock = 100, Description = "Dave Smith synth", Name = "Sequential Circuits Prophet 5", Price = 12, PictureFileName = "4.png" },
-                new CatalogItem { Id = 5, CatalogTypeId = 1, CatalogManufacturerId = 3, CatalogItemSpecsId = 5, AvailableStock = 100, Description = "Unique Korg synth design", Name = "Korg Monopoly", Price = 8.5M, PictureFileName = "5.png" },
-                new CatalogItem { Id = 6, CatalogTypeId = 2, CatalogManufacturerId = 3, CatalogItemSpecsId = 6, AvailableStock = 100, Description = "Korg workstation", Name = "Korg Trinity", Price = 12, PictureFileName = "6.png" },
-                new CatalogItem { Id = 7, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 7, AvailableStock = 100, Description = "Moog Ensemble keyboard", Name = "Moog Opus 3", Price = 12, PictureFileName = "7.png" },
-                new CatalogItem { Id = 8, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 8, AvailableStock = 100, Description = "First moog synth", Name = "Moog Model D", Price = 8.5M, PictureFileName = "8.png" },
-                new CatalogItem { Id = 9, CatalogTypeId = 1, CatalogManufacturerId = 5, CatalogItemSpecsId = 9, AvailableStock = 100, Description = "Revision of Bass Station I", Name = "Novation BassStation 2", Price = 12, PictureFileName = "9.png" },
-                new CatalogItem { Id = 10, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 10, AvailableStock = 100, Description = "Semimodular Moog synth", Name = "Moog Prodigy", Price = 12, PictureFileName = "10.png" },
-                new CatalogItem { Id = 11, CatalogTypeId = 3, CatalogManufacturerId = 5, CatalogItemSpecsId = 11, AvailableStock = 100, Description = "New Novation polysynth", Name = "Novation Summit", Price = 8.5M, PictureFileName = "11.png" },
-                new CatalogItem { Id = 12, CatalogTypeId = 4, CatalogManufacturerId = 6, CatalogItemSpecsId = 12, AvailableStock = 100, Description = "Nord first release", Name = "Nord Lead I", Price = 12, PictureFileName = "12.png" },
+                new CatalogItem { Id = 1, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 1, AvailableStock = 100, Description = "Roland flagship synth", Name = "Roland Jupiter 6", Price = 19.5M, PictureFileName = "roland_jupiter6.jpg" },
+                new CatalogItem { Id = 2, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 2, AvailableStock = 100, Description = "Roland flagship synth", Name = "Roland Jupiter 8", Price= 8.50M, PictureFileName = "roland_jup8.jpg" },
+                new CatalogItem { Id = 3, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 3, AvailableStock = 100, Description = "Classic Roland synth", Name = "Roland Juno 60", Price = 12, PictureFileName = "roland_juno60.jpg" },
+                new CatalogItem { Id = 4, CatalogTypeId = 1, CatalogManufacturerId = 2, CatalogItemSpecsId = 4, AvailableStock = 100, Description = "Dave Smith synth", Name = "Sequential Circuits Prophet 5", Price = 12, PictureFileName = "sci_prophet5.jpg" },
+                new CatalogItem { Id = 5, CatalogTypeId = 1, CatalogManufacturerId = 3, CatalogItemSpecsId = 5, AvailableStock = 100, Description = "Unique Korg synth design", Name = "Korg Monopoly", Price = 8.5M, PictureFileName = "korg_monopoly.jpg" },
+                new CatalogItem { Id = 6, CatalogTypeId = 2, CatalogManufacturerId = 3, CatalogItemSpecsId = 6, AvailableStock = 100, Description = "Korg workstation", Name = "Korg Trinity", Price = 12, PictureFileName = "korg_trinity.jpg" },
+                new CatalogItem { Id = 7, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 7, AvailableStock = 100, Description = "Moog Ensemble keyboard", Name = "Moog Opus 3", Price = 12, PictureFileName = "moog_opus3.jpg" },
+                new CatalogItem { Id = 8, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 8, AvailableStock = 100, Description = "First moog synth", Name = "Moog Model D", Price = 8.5M, PictureFileName = "moog_minimoog.jpg" },
+                new CatalogItem { Id = 9, CatalogTypeId = 1, CatalogManufacturerId = 5, CatalogItemSpecsId = 9, AvailableStock = 100, Description = "Revision of Bass Station I", Name = "Novation BassStation 2", Price = 12, PictureFileName = "novation_bassstation2.jpg" },
+                new CatalogItem { Id = 10, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 10, AvailableStock = 100, Description = "Semimodular Moog synth", Name = "Moog Prodigy", Price = 12, PictureFileName = "moog_prodigy.jpg" },
+                new CatalogItem { Id = 11, CatalogTypeId = 3, CatalogManufacturerId = 5, CatalogItemSpecsId = 11, AvailableStock = 100, Description = "New Novation polysynth", Name = "Novation Summit", Price = 8.5M, PictureFileName = "novation_summit.jpg" },
+                new CatalogItem { Id = 12, CatalogTypeId = 4, CatalogManufacturerId = 6, CatalogItemSpecsId = 12, AvailableStock = 100, Description = "Nord first release", Name = "Nord Lead I", Price = 12, PictureFileName = "clavia_nord_lead.jpg" },
             };
         }
 
-        public static IEnumerable<CatalogManufacturer> GetPreconfiguredCatalogManufacturer()
+        public static IEnumerable<CatalogManufacturer> GetPreconfiguredCatalogManufacturers()
         {
             return new List<CatalogManufacturer>()
             {

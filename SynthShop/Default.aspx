@@ -1,10 +1,10 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SynthShop._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SynthShop.Default" %>
 
 <asp:Content ID="CatalogList" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="esh-table">
         <p class="esh-link-wrapper">
-            <a runat="server" href="<%$RouteUrl:RouteName=CreateProductRoute%>" class="btn esh-button esh-button-primary">
+            <a href="<%$RouteUrl:RouteName=CreateProductRoute%>" runat="server" class="btn esh-button esh-button-primary">
                 Create New
             </a>
         </p>
@@ -42,7 +42,6 @@
                 <tr>
                     <td>
                         <image class="esh-thumbnail" src='/Pics/<%#:Item.PictureFileName%>' />
-                        </a>
                     </td>
                     <td>
                         <p> <%#:Item.Name%> </p>
@@ -51,7 +50,7 @@
                         <p> <%#:Item.Description%> </p>
                     </td>
                     <td>
-                        <p> <%#:Item.CatalogBrand.Brand%> </p>
+                        <p> <%#:Item.CatalogManufacturer.Manufacturer%> </p>
                     </td>
                     <td>
                         <p> <%#:Item.CatalogType.Type%> </p>
@@ -67,13 +66,7 @@
                     <td>
                         <p> <%#:Item.AvailableStock%> </p>
                     </td>
-                    <!--<td>
-                        <p> <%#:Item.RestockThreshold%> </p>
-                    </td>
-                    <td>
-                        <p> <%#:Item.MaxStockThreshold%> </p>
-                    </td>
-                        -->
+
                     <td>
                         <asp:HyperLink NavigateUrl='<%# GetRouteUrl("EditProductRoute", new {id = Item.Id}) %>' runat="server" CssClass="esh-table-link">
                             Edit

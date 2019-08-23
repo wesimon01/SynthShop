@@ -1,19 +1,17 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Integration.Web;
+using log4net;
+using SynthShop.Modules;
+using SynthShopData.Models;
+using SynthShopData.Models.Infrastructure;
+using System;
+using System.Configuration;
+using System.Data.Entity;
+using System.Diagnostics;
 using System.Reflection;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
-using System.Web.Security;
-using System.Web.SessionState;
-using Autofac;
-using Autofac.Integration.Web;
-using log4net;
-using System.Configuration;
-using System.Diagnostics;
-using System.Data.Entity;
-using SynthShop.Modules;
 
 namespace SynthShop
 {
@@ -37,7 +35,6 @@ namespace SynthShop
             ConfigContainer();
             ConfigDataBase();
         }
-
         protected void Session_Start(Object sender, EventArgs e)
         {
             HttpContext.Current.Session["MachineName"] = Environment.MachineName;
@@ -46,13 +43,14 @@ namespace SynthShop
         private void ConfigContainer()
         {
             var builder = new ContainerBuilder();
-            var mockData = bool.Parse(ConfigurationManager.AppSettings["UseMockData"]);
-            builder.RegisterModule(new ApplicationModule(mockData));
+            var testData = bool.Parse(ConfigurationManager.AppSettings["UseTestData"]);
+            builder.RegisterModule(new ApplicationModule(testData));
             container = builder.Build();
+            _containerProvider = new ContainerProvider(container);
         }
         private void ConfigDataBase()
         {
-            var mockData = bool.Parse(ConfigurationManager.AppSettings["UseMockData"]);
+            var mockData = bool.Parse(ConfigurationManager.AppSettings["UseTestData"]);
 
             if (!mockData)
             {
@@ -66,7 +64,6 @@ namespace SynthShop
 
             _log.Debug("Application_BeginRequest");
         }
-
     }
 
     public class ActivityIdHelper 

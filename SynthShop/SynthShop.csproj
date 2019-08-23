@@ -151,11 +151,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="Catalog\About.aspx" />
     <Content Include="Catalog\Delete.aspx" />
     <Content Include="Catalog\Details.aspx" />
     <Content Include="Catalog\Edit.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Catalog\Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -164,18 +164,35 @@
     <Content Include="Catalog\Create.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Montserrat-Bold.svg" />
+    <Content Include="fonts\Montserrat-Regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="ItemPics\clavia_nord_lead.jpg" />
+    <Content Include="ItemPics\korg_monopoly.jpg" />
+    <Content Include="ItemPics\korg_trinity.jpg" />
+    <Content Include="ItemPics\moog_minimoog.jpg" />
+    <Content Include="ItemPics\moog_opus3.jpg" />
+    <Content Include="ItemPics\moog_prodigy.jpg" />
+    <Content Include="ItemPics\novation_bassstation2.jpg" />
+    <Content Include="ItemPics\novation_summit.jpg" />
+    <Content Include="ItemPics\roland_juno60.jpg" />
+    <Content Include="ItemPics\roland_jup8.jpg" />
+    <Content Include="ItemPics\roland_jupiter6.jpg" />
+    <Content Include="ItemPics\sci_prophet5.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\Montserrat-Bold.eot" />
+    <Content Include="fonts\Montserrat-Bold.ttf" />
+    <Content Include="fonts\Montserrat-Bold.woff" />
+    <Content Include="fonts\Montserrat-Bold.woff2" />
+    <Content Include="fonts\Montserrat-Regular.eot" />
+    <Content Include="fonts\Montserrat-Regular.ttf" />
+    <Content Include="fonts\Montserrat-Regular.woff" />
+    <Content Include="fonts\Montserrat-Regular.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -211,11 +228,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
+    <Compile Include="Catalog\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
+    <Compile Include="Catalog\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -240,11 +257,11 @@
     <Compile Include="Catalog\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
+    <Compile Include="Catalog\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
+    <Compile Include="Catalog\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Catalog\Create.aspx.cs">

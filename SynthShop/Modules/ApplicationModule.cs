@@ -1,24 +1,21 @@
 ﻿using Autofac;
 using SynthShop.Services;
 using SynthShopData.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using SynthShopData.Models.Infrastructure;
 
 namespace SynthShop.Modules
 {
     public class ApplicationModule : Module
     {
-        private bool useMockData;
+        private bool useTestData;
 
-        public ApplicationModule(bool useMockData)
+        public ApplicationModule(bool useTestData)
         {
-            this.useMockData = useMockData;
+            this.useTestData = useTestData;
         }
         protected override void Load(ContainerBuilder builder)
         {
-            if (useMockData)
+            if (useTestData)
             {
                 builder.RegisterType<CatalogServiceTest>()
                     .As<ICatalogService>()
@@ -31,12 +28,12 @@ namespace SynthShop.Modules
                     .InstancePerLifetimeScope();                
             }
             
-            builder.RegisterType<CatalogDBContext>()
-                .InstancePerLifetimeScope();
-            builder.RegisterType<CatalogDBInitializer>()
-                .InstancePerLifetimeScope();
-            builder.RegisterType<CatalogItemHiLoGenerator>()
-                .InstancePerLifetimeScope();
+            //builder.RegisterType<CatalogDBContext>()
+            //    .InstancePerLifetimeScope();
+            //builder.RegisterType<CatalogDBInitializer>()
+            //    .InstancePerLifetimeScope();
+            //builder.RegisterType<CatalogItemHiLoGenerator>()
+            //    .InstancePerLifetimeScope();
         }
     }
 }

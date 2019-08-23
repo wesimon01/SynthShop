@@ -1,5 +1,6 @@
 ﻿using log4net;
 using SynthShop.Services;
+using SynthShopData.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,13 @@ namespace SynthShop.Catalog
         private static readonly ILog _log = 
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         
+        public ICatalogService CatalogService { get; set; }
+        protected CatalogItem product;
         protected void Page_Load(object sender, EventArgs e)
         {
             var productId = Convert.ToInt32(Page.RouteData.Values["id"]);
             _log.Info($"Now loading... /Catalog/Details.aspx?id={productId}");
-            productId = CatalogService.FindCatalogItem(productId);
+            product = CatalogService.FindCatalogItem(productId);
 
             this.DataBind();
         }
