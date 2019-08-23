@@ -29,8 +29,6 @@
                             <th>Price</th>
                             <th>Picture name</th>
                             <th>Stock</th>
-                            <th>Restock</th>
-                            <th>Max stock</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,7 +39,7 @@
             <ItemTemplate>
                 <tr>
                     <td>
-                        <image class="esh-thumbnail" src='/Pics/<%#:Item.PictureFileName%>' />
+                        <image class="esh-thumbnail" src='/ItemPics/<%#:Item.PictureFileName%>' />
                     </td>
                     <td>
                         <p> <%#:Item.Name%> </p>
@@ -72,7 +70,7 @@
                             Edit
                         </asp:HyperLink>
                         |
-                        <asp:HyperLink NavigateUrl='<%# GetRouteUrl("ProductDetalisRoute", new {id = Item.Id}) %>' runat="server" CssClass="esh-table-link">
+                        <asp:HyperLink NavigateUrl='<%# GetRouteUrl("ProductDetailsRoute", new {id = Item.Id}) %>' runat="server" CssClass="esh-table-link">
                             Details
                         </asp:HyperLink>
                         |

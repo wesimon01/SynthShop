@@ -35,10 +35,17 @@ namespace SynthShop
             ConfigContainer();
             ConfigDataBase();
         }
-        protected void Session_Start(Object sender, EventArgs e)
+        protected void Session_Start(object sender, EventArgs e)
         {
             HttpContext.Current.Session["MachineName"] = Environment.MachineName;
             HttpContext.Current.Session["SessionStartTime"] = DateTime.Now;
+        }
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+            LogicalThreadContext.Properties["activityId"] = new ActivityIdHelper();
+            LogicalThreadContext.Properties["requestinfo"] = new WebRequestInfo();
+
+            _log.Debug("Application_BeginRequest");
         }
         private void ConfigContainer()
         {
@@ -50,19 +57,12 @@ namespace SynthShop
         }
         private void ConfigDataBase()
         {
-            var mockData = bool.Parse(ConfigurationManager.AppSettings["UseTestData"]);
+            var testData = bool.Parse(ConfigurationManager.AppSettings["UseTestData"]);
 
-            if (!mockData)
+            if (!testData)
             {
                 Database.SetInitializer<CatalogDBContext>(container.Resolve<CatalogDBInitializer>());
             }
-        }
-        protected void Application_BeginRequest(object sender, EventArgs e)
-        {
-            LogicalThreadContext.Properties["activityId"] = new ActivityIdHelper();
-            LogicalThreadContext.Properties["requestinfo"] = new WebRequestInfo();
-
-            _log.Debug("Application_BeginRequest");
         }
     }
 

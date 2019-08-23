@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SynthShopData.Models.Infrastructure
 {
@@ -12,18 +9,18 @@ namespace SynthShopData.Models.Infrastructure
         {
             return new List<CatalogItem>()
             {
-                new CatalogItem { Id = 1, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 1, AvailableStock = 100, Description = "Roland flagship synth", Name = "Roland Jupiter 6", Price = 19.5M, PictureFileName = "roland_jupiter6.jpg" },
-                new CatalogItem { Id = 2, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 2, AvailableStock = 100, Description = "Roland flagship synth", Name = "Roland Jupiter 8", Price= 8.50M, PictureFileName = "roland_jup8.jpg" },
-                new CatalogItem { Id = 3, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 3, AvailableStock = 100, Description = "Classic Roland synth", Name = "Roland Juno 60", Price = 12, PictureFileName = "roland_juno60.jpg" },
-                new CatalogItem { Id = 4, CatalogTypeId = 1, CatalogManufacturerId = 2, CatalogItemSpecsId = 4, AvailableStock = 100, Description = "Dave Smith synth", Name = "Sequential Circuits Prophet 5", Price = 12, PictureFileName = "sci_prophet5.jpg" },
-                new CatalogItem { Id = 5, CatalogTypeId = 1, CatalogManufacturerId = 3, CatalogItemSpecsId = 5, AvailableStock = 100, Description = "Unique Korg synth design", Name = "Korg Monopoly", Price = 8.5M, PictureFileName = "korg_monopoly.jpg" },
-                new CatalogItem { Id = 6, CatalogTypeId = 2, CatalogManufacturerId = 3, CatalogItemSpecsId = 6, AvailableStock = 100, Description = "Korg workstation", Name = "Korg Trinity", Price = 12, PictureFileName = "korg_trinity.jpg" },
-                new CatalogItem { Id = 7, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 7, AvailableStock = 100, Description = "Moog Ensemble keyboard", Name = "Moog Opus 3", Price = 12, PictureFileName = "moog_opus3.jpg" },
-                new CatalogItem { Id = 8, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 8, AvailableStock = 100, Description = "First moog synth", Name = "Moog Model D", Price = 8.5M, PictureFileName = "moog_minimoog.jpg" },
-                new CatalogItem { Id = 9, CatalogTypeId = 1, CatalogManufacturerId = 5, CatalogItemSpecsId = 9, AvailableStock = 100, Description = "Revision of Bass Station I", Name = "Novation BassStation 2", Price = 12, PictureFileName = "novation_bassstation2.jpg" },
-                new CatalogItem { Id = 10, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 10, AvailableStock = 100, Description = "Semimodular Moog synth", Name = "Moog Prodigy", Price = 12, PictureFileName = "moog_prodigy.jpg" },
-                new CatalogItem { Id = 11, CatalogTypeId = 3, CatalogManufacturerId = 5, CatalogItemSpecsId = 11, AvailableStock = 100, Description = "New Novation polysynth", Name = "Novation Summit", Price = 8.5M, PictureFileName = "novation_summit.jpg" },
-                new CatalogItem { Id = 12, CatalogTypeId = 4, CatalogManufacturerId = 6, CatalogItemSpecsId = 12, AvailableStock = 100, Description = "Nord first release", Name = "Nord Lead I", Price = 12, PictureFileName = "clavia_nord_lead.jpg" },
+                new CatalogItem { Id = 1, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 1, AvailableStock = 2, Description = "Roland flagship synth", Name = "Roland Jupiter 6", Price = 2500M, PictureFileName = "roland_jupiter6.jpg" },
+                new CatalogItem { Id = 2, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 2, AvailableStock = 1, Description = "Roland flagship synth", Name = "Roland Jupiter 8", Price= 10000M, PictureFileName = "roland_jup8.jpg" },
+                new CatalogItem { Id = 3, CatalogTypeId = 1, CatalogManufacturerId = 1, CatalogItemSpecsId = 3, AvailableStock = 4, Description = "Classic Roland synth", Name = "Roland Juno 60", Price = 1800M, PictureFileName = "roland_juno60.jpg" },
+                new CatalogItem { Id = 11, CatalogTypeId = 1, CatalogManufacturerId = 2, CatalogItemSpecsId = 4, AvailableStock = 1, Description = "Dave Smith synth", Name = "Sequential Prophet 5", Price = 6200M, PictureFileName = "sci_prophet5.jpg" },
+                new CatalogItem { Id = 10, CatalogTypeId = 1, CatalogManufacturerId = 3, CatalogItemSpecsId = 5, AvailableStock = 2, Description = "Unique Korg synth design", Name = "Korg Monopoly", Price = 1500M, PictureFileName = "korg_monopoly.jpg" },
+                new CatalogItem { Id = 6, CatalogTypeId = 2, CatalogManufacturerId = 3, CatalogItemSpecsId = 6, AvailableStock = 3, Description = "Korg workstation", Name = "Korg Trinity", Price = 800M, PictureFileName = "korg_trinity.jpg" },
+                new CatalogItem { Id = 7, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 7, AvailableStock = 4, Description = "Moog Ensemble keyboard", Name = "Moog Opus 3", Price = 1200M, PictureFileName = "moog_opus3.jpg" },
+                new CatalogItem { Id = 8, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 8, AvailableStock = 2, Description = "First moog synth", Name = "Moog Model D", Price = 3500M, PictureFileName = "moog_minimoog.jpg" },
+                new CatalogItem { Id = 9, CatalogTypeId = 1, CatalogManufacturerId = 5, CatalogItemSpecsId = 9, AvailableStock = 10, Description = "Revision of Bass Station I", Name = "Novation BassStation 2", Price = 350M, PictureFileName = "novation_bassstation2.jpg" },
+                new CatalogItem { Id = 12, CatalogTypeId = 1, CatalogManufacturerId = 4, CatalogItemSpecsId = 10, AvailableStock = 6, Description = "Semimodular Moog synth", Name = "Moog Prodigy", Price = 1200M, PictureFileName = "moog_prodigy.jpg" },
+                new CatalogItem { Id = 4, CatalogTypeId = 3, CatalogManufacturerId = 5, CatalogItemSpecsId = 11, AvailableStock = 30, Description = "New Novation polysynth", Name = "Novation Summit", Price = 1999M, PictureFileName = "novation_summit.jpg" },
+                new CatalogItem { Id = 5, CatalogTypeId = 4, CatalogManufacturerId = 6, CatalogItemSpecsId = 12, AvailableStock = 7, Description = "Nord first release", Name = "Nord Lead I", Price = 850M, PictureFileName = "clavia_nord_lead.jpg" },
             };
         }
 
