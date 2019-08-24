@@ -9,10 +9,12 @@ namespace SynthShop.Services
     public class CatalogServiceTest : ICatalogService
     {
         private List<CatalogItem> catalogItems;
+        private List<CatalogItemSpecs> catalogItemSpecs;
 
         public CatalogServiceTest()
         {
-            catalogItems = new List<CatalogItem>(PreconfiguredData.GetPreconfiguredCatalogItems());                
+            catalogItems = new List<CatalogItem>(PreconfiguredData.GetPreconfiguredCatalogItems());  
+            catalogItemSpecs = new List<CatalogItemSpecs>(PreconfiguredData.GetPreconfiguredCatalogItemSpecs());
         }
 
         public void CreateCatalogItem(CatalogItem catalogItem)
@@ -39,9 +41,13 @@ namespace SynthShop.Services
             return new PaginatedItemsViewModel<CatalogItem>(pageIndex, pageSize, items.Count, itemsOnPage);
         }
 
-        public IEnumerable<CatalogItemSpecs> GetCatalogItemSpecs(int catalogItemId)
+        public IEnumerable<CatalogItemSpecs> GetAllCatalogItemSpecs(int catalogItemId)
         {
             return PreconfiguredData.GetPreconfiguredCatalogItemSpecs();
+        }
+        public CatalogItemSpecs GetCatalogItemSpecs(int id)
+        {
+            return catalogItemSpecs.FirstOrDefault(i => i.Id == id);
         }
 
         public IEnumerable<CatalogManufacturer> GetCatalogManufacturers()
@@ -78,8 +84,10 @@ namespace SynthShop.Services
 
             return items;
         }
+
         public void Dispose()
         {
         }
+
     }
 }

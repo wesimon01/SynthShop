@@ -9,6 +9,6 @@ namespace SynthShop.ViewModel
     public class DetailsViewModel
     {
         public CatalogItemSpecs CatalogItemSpecs { get; set; }
-
+        public CatalogItem CatalogItem { get; set; }
     }
 }
