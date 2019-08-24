@@ -14,6 +14,11 @@ namespace SynthShop.Services
             throw new NotImplementedException();
         }
 
+        public int CreateCatalogItemSpecs(CatalogItemSpecs itemSpecs)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Dispose()
         {
             throw new NotImplementedException();
@@ -44,7 +49,7 @@ namespace SynthShop.Services
             throw new NotImplementedException();
         }
 
-        public void RemoveCatalogItems(CatalogItem catalogItem)
+        public void RemoveCatalogItem(CatalogItem catalogItem)
         {
             throw new NotImplementedException();
         }

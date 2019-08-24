@@ -49,7 +49,13 @@ namespace SynthShop.Services
         {
             return catalogItemSpecs.FirstOrDefault(i => i.Id == id);
         }
-
+        public int CreateCatalogItemSpecs(CatalogItemSpecs itemSpecs)
+        {
+            var maxId = catalogItemSpecs.Max(i => i.Id);
+            itemSpecs.Id = ++maxId;
+            catalogItemSpecs.Add(itemSpecs);
+            return maxId;
+        }
         public IEnumerable<CatalogManufacturer> GetCatalogManufacturers()
         {
             return PreconfiguredData.GetPreconfiguredCatalogManufacturers();
@@ -60,7 +66,7 @@ namespace SynthShop.Services
             return PreconfiguredData.GetPreconfiguredCatalogTypes();
         }
 
-        public void RemoveCatalogItems(CatalogItem catalogItem)
+        public void RemoveCatalogItem(CatalogItem catalogItem)
         {
             catalogItems.Remove(catalogItem);
         }
@@ -77,7 +83,6 @@ namespace SynthShop.Services
         {
             var catalogTypes = PreconfiguredData.GetPreconfiguredCatalogTypes();
             var catalogManufacturers = PreconfiguredData.GetPreconfiguredCatalogManufacturers();
-            var catalogItemSpecs = PreconfiguredData.GetPreconfiguredCatalogItemSpecs();
             items.ForEach(i => i.CatalogManufacturer = catalogManufacturers.First(m => m.Id == i.CatalogManufacturerId));
             items.ForEach(i => i.CatalogType = catalogTypes.First(t => t.Id == i.CatalogTypeId));
             items.ForEach(i => i.CatalogItemSpecs = catalogItemSpecs.First(s => s.Id == i.CatalogItemSpecsId));

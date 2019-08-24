@@ -27,7 +27,7 @@
                 <div class="col-md-3">
                     <asp:DropDownList ID="Manufacturer" runat="server"
                         SelectMethod="GetManufacturers"
-                        ItemType="SynthShop.Models.CatalogManufacturer"
+                        ItemType="SynthShopData.Models.CatalogManufacturer"
                         DataTextField="Manufacturer"
                         DataValueField="Id"
                         CssClass="form-control">
@@ -40,7 +40,7 @@
                 <div class="col-md-3">
                     <asp:DropDownList ID="Type" runat="server"
                         SelectMethod="GetTypes"
-                        ItemType="SynthShop.Models.CatalogType"
+                        ItemType="SynthShopData.Models.CatalogType"
                         DataTextField="Type"
                         DataValueField="Id"
                         CssClass="form-control">
@@ -69,32 +69,71 @@
                 <div class="col-md-3">
                     <asp:TextBox ID="Stock" runat="server" CssClass="form-control">0</asp:TextBox>
                     <asp:RangeValidator runat="server" ControlToValidate="Stock" Type="Integer" CssClass="text-danger" Display="Dynamic"
-                        MinimumValue="0" MaximumValue="10000000" ErrorMessage="The field Stock must be between 0 and 10 million." />
+                        MinimumValue="0" MaximumValue="100000" ErrorMessage="The field Stock must be between 0 and 100000" />
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="control-label col-md-2">Restock</label>
+                <label class="control-label col-md-2">Polyphony</label>
                 <div class="col-md-3">
-                    <asp:TextBox ID="Restock" runat="server" CssClass="form-control">0</asp:TextBox>
-                    <asp:RangeValidator runat="server" ControlToValidate="Restock" Type="Integer" CssClass="text-danger" Display="Dynamic"
-                        MinimumValue="0" MaximumValue="10000000" ErrorMessage="The field Restock must be between 0 and 10 million." />
+                    <asp:TextBox ID="Polyphony" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="control-label col-md-2">Max stock</label>
+                <label class="control-label col-md-2">Oscillators</label>
                 <div class="col-md-3">
-                    <asp:TextBox ID="Maxstock" runat="server" CssClass="form-control">0</asp:TextBox>
-                    <asp:RangeValidator runat="server" ControlToValidate="Maxstock" Type="Integer" CssClass="text-danger" Display="Dynamic"
-                        MinimumValue="0" MaximumValue="10000000" ErrorMessage="The field Max stock must be between 0 and 10 million." />
+                    <asp:TextBox ID="Oscillators" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Lfo</label>
+                <div class="col-md-3">
+                    <asp:TextBox ID="Lfo" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Filter</label>
+                <div class="col-md-3">
+                    <asp:TextBox ID="Filter" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Effects</label>
+                <div class="col-md-3">
+                    <asp:TextBox ID="Effects" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Keyboard</label>
+                <div class="col-md-3">
+                    <asp:TextBox ID="Keyboard" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Memory</label>
+                <div class="col-md-3">
+                    <asp:TextBox ID="Memory" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Date Produced</label>
+                <div class="col-md-3">
+                    <asp:TextBox ID="DateProduced" runat="server" CssClass="form-control">0</asp:TextBox>
+                    <asp:RangeValidator runat="server" ControlToValidate="DateProduced" Type="Integer" CssClass="text-danger" Display="Dynamic"
+                        MinimumValue="1935" MaximumValue="2050" ErrorMessage="Must be a valid date" />
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-3 text-right esh-button-actions">
-                    <a runat="server" href="~" class="btn esh-button esh-button-secondary">[ Cancel ]
-                    </a>
+                    <a runat="server" href="~" class="btn esh-button esh-button-secondary"> [ Cancel ] </a>
                     <asp:Button CssClass="btn esh-button esh-button-primary" runat="server" Text="[ Create ]"
                         OnClick="Create_Click" />
                 </div>

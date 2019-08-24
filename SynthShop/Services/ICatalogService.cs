@@ -12,9 +12,10 @@ namespace SynthShop.Services
         IEnumerable<CatalogType> GetCatalogTypes();
         IEnumerable<CatalogItemSpecs> GetAllCatalogItemSpecs(int catalogItemId);
         CatalogItemSpecs GetCatalogItemSpecs(int id);
+        int CreateCatalogItemSpecs(CatalogItemSpecs itemSpecs);
         void CreateCatalogItem(CatalogItem catalogItem);
         void UpdateCatalogItem(CatalogItem catalogItem);
-        void RemoveCatalogItems(CatalogItem catalogItem);
+        void RemoveCatalogItem(CatalogItem catalogItem);
         PaginatedItemsViewModel<CatalogItem> GetCatalogItemsPaginated(int pageSize, int pageIndex);
         //DetailsViewModel GetCatalogItemDetails(int id);
     }
