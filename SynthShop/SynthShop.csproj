@@ -157,6 +157,7 @@
     <Content Include="Catalog\Delete.aspx" />
     <Content Include="Catalog\Details.aspx" />
     <Content Include="Catalog\Edit.aspx" />
+    <Content Include="Catalog\EditSpecs.aspx" />
     <Content Include="Content\base.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -301,6 +302,13 @@
     </Compile>
     <Compile Include="Catalog\Create.aspx.designer.cs">
       <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalog\EditSpecs.aspx.cs">
+      <DependentUpon>EditSpecs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalog\EditSpecs.aspx.designer.cs">
+      <DependentUpon>EditSpecs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

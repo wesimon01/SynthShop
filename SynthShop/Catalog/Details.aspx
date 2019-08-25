@@ -64,6 +64,9 @@
             <a runat="server" href='<%# GetRouteUrl("EditProductRoute", new {id = product.Id}) %>' class="esh-link-item">Edit
             </a>
             |
+            <a runat="server" href='<%# GetRouteUrl("EditSpecsRoute", new { id = product.Id }) %>' class="esh-link-item">Edit Specs
+            </a>
+            |
             <a runat="server" href="~" class="esh-link-item">Back to list</a>
         </div>
     </div>

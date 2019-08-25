@@ -31,6 +31,11 @@ namespace SynthShop
                 "Catalog/Details/{id}",
                 "~/Catalog/Details.aspx" 
                 );
+            routes.MapPageRoute(
+                "EditSpecsRoute",
+                "Catalog/EditSpecs/{id}",
+                "~/Catalog/EditSpecs.aspx"
+                );
              routes.MapPageRoute(
                 "DeleteProductRoute",
                 "Catalog/Delete/{id}",

@@ -59,6 +59,11 @@ namespace SynthShop.Services
             throw new NotImplementedException();
         }
 
+        public void UpdateCatalogItemSpecs(CatalogItemSpecs catalogItemSpecs)
+        {
+            throw new NotImplementedException();
+        }
+
         CatalogItemSpecs ICatalogService.GetCatalogItemSpecs(int id)
         {
             throw new NotImplementedException();

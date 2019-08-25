@@ -15,8 +15,9 @@ namespace SynthShop.Services
         int CreateCatalogItemSpecs(CatalogItemSpecs itemSpecs);
         void CreateCatalogItem(CatalogItem catalogItem);
         void UpdateCatalogItem(CatalogItem catalogItem);
+        void UpdateCatalogItemSpecs(CatalogItemSpecs catalogItemSpecs);
         void RemoveCatalogItem(CatalogItem catalogItem);
         PaginatedItemsViewModel<CatalogItem> GetCatalogItemsPaginated(int pageSize, int pageIndex);
-        //DetailsViewModel GetCatalogItemDetails(int id);
+        
     }
 }

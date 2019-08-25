@@ -79,6 +79,14 @@ namespace SynthShop.Services
                 catalogItems[catalogItems.IndexOf(originalItem)] = modifiedItem;
             }
         }
+        public void UpdateCatalogItemSpecs(CatalogItemSpecs modifiedItem)
+        {
+            var originalItem = GetCatalogItemSpecs(modifiedItem.Id);
+            if (originalItem != null)
+            {
+                catalogItemSpecs[catalogItemSpecs.IndexOf(originalItem)] = modifiedItem;
+            }
+        }
         private List<CatalogItem> ComposeCatalogItems(List<CatalogItem> items)
         {
             var catalogTypes = PreconfiguredData.GetPreconfiguredCatalogTypes();

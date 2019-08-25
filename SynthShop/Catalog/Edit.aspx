@@ -6,7 +6,7 @@
 
     <div class="container">
         <div class="row">
-            <asp:Image runat="server" CssClass="col-md-6 esh-picture" ImageUrl='<%#"/Pics/" + product.PictureFileName%>' />
+            <asp:Image runat="server" CssClass="col-md-6 esh-picture" ImageUrl='<%#"/ItemPics/" + product.PictureFileName%>' />
             <div class="col-md-6 form-horizontal">
 
                 <div class="form-group">
