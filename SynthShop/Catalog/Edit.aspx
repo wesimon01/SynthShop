@@ -4,7 +4,7 @@
 
     <h2 class="esh-body-title">Edit</h2>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <asp:Image runat="server" CssClass="col-md-6 esh-picture" ImageUrl='<%#"/ItemPics/" + product.PictureFileName%>' />
             <div class="col-md-6 form-horizontal">
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="form-group">
-                    <div class="col-md-12 text-right esh-button-actions">
+                    <div class="col-md-12 text-center esh-button-actions">
                         <a runat="server" href="~" class="btn esh-button esh-button-secondary">[ Cancel ]
                         </a>
                         <asp:Button CssClass="btn esh-button esh-button-primary" runat="server" Text="[ Save ]" OnClick="Save_Click" />

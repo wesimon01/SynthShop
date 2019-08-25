@@ -21,7 +21,7 @@ namespace SynthShop.Catalog
                 product = CatalogService.FindCatalogItem(productId);
 
                 ManufacturerDropDownList.DataSource = CatalogService.GetCatalogManufacturers();
-                ManufacturerDropDownList.SelectedValue = product.Id.ToString();
+                ManufacturerDropDownList.SelectedValue = product.CatalogManufacturerId.ToString();
 
                 TypeDropDownList.DataSource = CatalogService.GetCatalogTypes();
                 TypeDropDownList.SelectedValue = product.CatalogTypeId.ToString();
